@@ -1,11 +1,9 @@
 ﻿
 using KSP.Localization;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using static CommNetAntennasInfo.Logging;
+using static CommNetAntennasConsumptor.Logging;
 
-namespace CommNetAntennasInfo
+namespace CommNetAntennasConsumptor
 {
     class ModuleAntennaToggler : PartModule, IScalarModule, IModuleInfo
     {
@@ -55,22 +53,16 @@ namespace CommNetAntennasInfo
 
         public bool IsMoving() => false;
 
-        public void SetUIRead(bool state)
-        {
-        }
+        public void SetUIRead(bool state) {}
 
-        public void SetUIWrite(bool state)
-        {
-        }
+        public void SetUIWrite(bool state) {}
 
 
         //---------IModuleInfo-------------------
 
         public string GetModuleTitle() => Localizer.Format("#CAE_ModuleAntennaTogglerInfoTitle");
 
-
         public override string GetInfo() => Localizer.Format("#CAE_ModuleAntennaTogglerInfo");
-
 
         public Callback<Rect> GetDrawModulePanelCallback() => null;
 

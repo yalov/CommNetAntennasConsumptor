@@ -27,7 +27,7 @@
 	int i2 = 0;
 	string s;
 
-	string versionfile =  @"C:\Users\User\Games\Development\CommNetAntennasInfo\CommNetAntennasInfo.version";
+	string versionfile =  @"C:\Users\User\Games\Development\CommNetAntennasConsumptor\CommNetAntennasConsumptor.version";
 	if (!File.Exists(versionfile))
 	{
 		Write("File: " + versionfile + " missing\n");		

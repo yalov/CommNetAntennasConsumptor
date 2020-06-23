@@ -2,11 +2,11 @@
 using System.Globalization;
 using UnityEngine;
 
-namespace CommNetAntennasInfo
+namespace CommNetAntennasConsumptor
 {
     public static class Logging
     {
-        private const string PREFIX = "<color=green>[CNAInfo]</color> ";
+        private const string PREFIX = "<color=green>[CNAConsumptor]</color> ";
         private const bool time = false;
 
         public static void Log<T>(T msg, params object[] args)

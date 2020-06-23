@@ -16,7 +16,7 @@ REM )
 
 rem Set variables here
 
-set MODNAME=CommNetAntennasInfo
+set MODNAME=CommNetAntennasConsumptor
 set LICENSE=%MODNAME%-License.txt
 set CHANGELOG=ChangeLog.md
 set VERSIONFILE=%MODNAME%.version

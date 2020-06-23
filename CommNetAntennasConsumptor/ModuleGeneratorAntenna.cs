@@ -2,9 +2,9 @@
 using KSP.Localization;
 using System.Collections.Generic;
 using System.Linq;
-using static CommNetAntennasInfo.Logging;
+using static CommNetAntennasConsumptor.Logging;
 
-namespace CommNetAntennasInfo
+namespace CommNetAntennasConsumptor
 {
     public class ModuleGeneratorAntenna : ModuleGenerator, IModuleInfo
     {
@@ -12,14 +12,7 @@ namespace CommNetAntennasInfo
         string ECConsumptionStr = "";
 
 
-        //ModuleDeployableAntenna moduleDeployable;
         ModuleDataTransmitter moduleDT;
-
-        //private void OnAnimationGroupStateChanged(ModuleAnimationGroup data0, bool data1)
-        //{
-        //    Log("OnAnimationGroupStateChanged: " + data0 + " " + data1);
-        //}
-
 
         public void LateUpdate()
         {
@@ -43,22 +36,11 @@ namespace CommNetAntennasInfo
                 }
             }
 
-            //Log("{0} {1} {2} {3}", moduleDT.isEnabled, moduleDT.isActiveAndEnabled, moduleDT.moduleIsEnabled, moduleDT.CanComm());
         }
-
-        //public void OnDisable()
-        //{
-        //    G﻿ameEvents.OnAnimationGroupStateChanged.Remove(OnAnimationGroupStateChanged);
-        //}
 
         public void Start()
         {
             //Log("ModuleGeneratorAntenna Start");
-            //G﻿ameEvents.OnAnimationGroupStateChanged.Add(OnAnimationGroupStateChanged);
-
-            //List<ModuleDeployableAntenna> MDAs = part.Modules.OfType<ModuleDeployableAntenna>().ToList();
-            //if (MDAs.Count == 1)
-            //    moduleDeployable = MDAs[0];
 
             List<ModuleDataTransmitter> MDTs = part.Modules.OfType<ModuleDataTransmitter>().ToList();
             if (MDTs.Count == 1)
@@ -96,8 +78,6 @@ namespace CommNetAntennasInfo
         }
         public override string GetInfo()
         {
-            //Log("ModuleGeneratorAntenna GetInfo");
-            //moduleName = "ModuleGeneratorAntenna";
             string text = "";
 
             List<ModuleDeployableAntenna> MDAs = part.Modules.OfType<ModuleDeployableAntenna>().ToList();
