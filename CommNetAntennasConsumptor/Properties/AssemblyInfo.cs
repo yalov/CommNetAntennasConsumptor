@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DataTransmitterCombinableExponentInfo")]
+[assembly: AssemblyTitle("CommNetAntennasConsumptor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DataTransmitterCombinableExponentInfo")]
+[assembly: AssemblyProduct("CommNetAntennasConsumptor")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2dd8a562-8999-4719-8848-4436ad85feca")]
+[assembly: Guid("2dd8a562-8999-4719-8848-44365585feca")]
 
 // Version information for an assembly consists of the following four values:
 //
