@@ -1,5 +1,8 @@
 ## ChangeLog:
 
+### Version 3.0.1
+ * ksp 1.8-1.10
+
 ### Version 3.0.0
  * CommNetAntennasConsumptor was excluded from the "CommNet Antennas Info"
  * supported DMagic Orbiral Science: Soil Moisture Sensor and SIGINT
