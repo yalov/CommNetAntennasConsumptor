@@ -1,5 +1,8 @@
 ## ChangeLog:
 
+### Version 3.0.2
+ * French translation (@vinix38)
+
 ### Version 3.0.1
  * ksp 1.8-1.10
 
