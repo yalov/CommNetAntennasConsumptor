@@ -8,7 +8,8 @@ namespace CommNetAntennasConsumptor
 {
     public class ModuleGeneratorAntenna : ModuleGenerator, IModuleInfo
     {
-        [KSPField(guiActive = true, guiActiveEditor = true, guiName = "#CAE_PAW_ConsumptionPermanent")]
+        [KSPField(guiActive = true, guiActiveEditor = true, guiName = "#CAE_PAW_ConsumptionPermanent",
+            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
         string ECConsumptionStr = "";
 
 
