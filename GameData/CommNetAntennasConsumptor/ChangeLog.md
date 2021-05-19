@@ -1,5 +1,13 @@
 ## ChangeLog:
 
+### Version 3.1.0
+ * scale consumprion for a power of 0.4 (by request of @Starman4308)
+   For example:
+   100G = 1 EC/s
+   2G   = 0.02^0.4 = 0.2 EC/s
+   5M   = 0.00005^0.4 = 0.019 EC/s
+   10T  = 100^0.4 = 3.6EC/s
+
 ### Version 3.0.3
  * ksp 1.11
  * fields grouped in the PAW
