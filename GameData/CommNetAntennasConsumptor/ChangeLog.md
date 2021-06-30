@@ -1,7 +1,19 @@
-## ChangeLog:
+﻿## ChangeLog:
+
+### Version 3.5.0
+Changes since 3.0.3:
+ * ksp 1.12
+ * Fix a bug with unrectactable antennas with ModuleCargoPart
+ * Fix wrong consumption for CAE antennas (patch order problem introduce in v3.1.0)
+ * Scale consumption for a power of 0.4 (by request of @Starman4308)
+   By default, RELAY Consumption is:
+   5M   → 0.00005 ^ 0.4 = 0.019 EC/s
+   2G   → 0.02    ^ 0.4 = 0.2 EC/s
+   100G → 1       ^ 0.4 = 1 EC/s
+   10T  → 100     ^ 0.4 = 6.3 EC/s
 
 ### Version 3.1.0
- * scale consumprion for a power of 0.4 (by request of @Starman4308)
+ * scale consumption for a power of 0.4 (by request of @Starman4308)
    For example:
    100G = 1 EC/s
    2G   = 0.02^0.4 = 0.2 EC/s

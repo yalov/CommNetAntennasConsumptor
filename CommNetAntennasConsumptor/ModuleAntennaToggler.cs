@@ -38,6 +38,7 @@ namespace CommNetAntennasConsumptor
 
         // -------IScalarModule-----------
 
+        
         public string ScalarModuleID => "ModuleAntennaToggler";
         public float GetScalar => scalar;
         public void SetScalar(float t) 

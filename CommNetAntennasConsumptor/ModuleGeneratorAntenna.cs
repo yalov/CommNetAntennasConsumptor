@@ -95,9 +95,9 @@ namespace CommNetAntennasConsumptor
             //    moduleDT = MDTs[0];
 
             if (moduleDeployable == null && !ContainsDMSIGINT && !ContainsDMSoilMoisture)
-                text += Localizer.Format("#CAE_ConsumptionMessage");
+                text += Localizer.Format("#CAE_MessageWhenEnabled");
             else
-                text += Localizer.Format("#CAE_ConsumptionMessageExt");
+                text += Localizer.Format("#CAE_MessageWhenExtended");
 
 
             if (this.resHandler.inputResources.Count == 1
