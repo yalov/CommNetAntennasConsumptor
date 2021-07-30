@@ -1,5 +1,10 @@
 ﻿## ChangeLog:
 
+### Version 3.5.1
+ * fix NFEX support
+ * fix MPO Probe toggler
+ * fix duplicating ModuleAntennaToggler patch logic in the ModuleGeneratorAntenna
+
 ### Version 3.5.0
 Changes since 3.0.3:
  * ksp 1.12
