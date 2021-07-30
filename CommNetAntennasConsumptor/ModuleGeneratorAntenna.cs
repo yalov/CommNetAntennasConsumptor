@@ -81,20 +81,9 @@ namespace CommNetAntennasConsumptor
         {
             string text = "";
 
-            List<ModuleDeployableAntenna> MDAs = part.Modules.OfType<ModuleDeployableAntenna>().ToList();
-            ModuleDeployableAntenna moduleDeployable = null;
-            if (MDAs.Count == 1)
-                moduleDeployable = MDAs[0];
+            bool ContainsToggler = part.Modules.Contains("ModuleAntennaToggler");
 
-
-            bool ContainsDMSIGINT = part.Modules.Contains("DMSIGINT");
-            bool ContainsDMSoilMoisture = part.Modules.Contains("DMSoilMoisture");
-
-            //List<ModuleDataTransmitter> MDTs = part.Modules.OfType<ModuleDataTransmitter>().ToList();
-            //if (MDTs.Count == 1)
-            //    moduleDT = MDTs[0];
-
-            if (moduleDeployable == null && !ContainsDMSIGINT && !ContainsDMSoilMoisture)
+            if (!ContainsToggler)
                 text += Localizer.Format("#CAE_MessageWhenEnabled");
             else
                 text += Localizer.Format("#CAE_MessageWhenExtended");
