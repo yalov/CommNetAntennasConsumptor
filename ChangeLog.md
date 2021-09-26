@@ -1,5 +1,9 @@
 ﻿## ChangeLog:
 
+### Version 3.5.2
+ * ksp 1.12.2
+ * MM 4.2.1
+
 ### Version 3.5.1
  * fix NFEX support
  * fix MPO Probe toggler
