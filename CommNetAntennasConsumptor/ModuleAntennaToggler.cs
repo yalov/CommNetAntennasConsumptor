@@ -10,7 +10,8 @@ namespace CommNetAntennasConsumptor
         [KSPField(isPersistant = true)]
         public bool AntennaEnabled = true;
 
-        [KSPField(guiName = "#autoLOC_6001352" /*Status*/, guiActive = true, guiActiveEditor = true)]
+        [KSPField(guiName = "#autoLOC_6001352" /*Status*/, guiActive = true, guiActiveEditor = true,
+            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
         public string statusText = Localizer.Format("#autoLOC_6001072"); //"Enabled";
 
         private float scalar;
@@ -20,7 +21,8 @@ namespace CommNetAntennasConsumptor
             SetScalar(AntennaEnabled ? 1f : 0f);
         }
 
-        [KSPEvent(guiName = "#CAE_PAW_DisableAntenna", guiActive = true, guiActiveEditor = true, active = true)]
+        [KSPEvent(guiName = "#CAE_PAW_DisableAntenna", guiActive = true, guiActiveEditor = true, active = true,
+            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
         public void ToggleAntenna()
         {
             AntennaEnabled = !AntennaEnabled;
@@ -36,6 +38,7 @@ namespace CommNetAntennasConsumptor
 
         // -------IScalarModule-----------
 
+        
         public string ScalarModuleID => "ModuleAntennaToggler";
         public float GetScalar => scalar;
         public void SetScalar(float t) 

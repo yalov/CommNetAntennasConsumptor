@@ -8,7 +8,8 @@ namespace CommNetAntennasConsumptor
 {
     public class ModuleGeneratorAntenna : ModuleGenerator, IModuleInfo
     {
-        [KSPField(guiActive = true, guiActiveEditor = true, guiName = "#CAE_PAW_ConsumptionPermanent")]
+        [KSPField(guiActive = true, guiActiveEditor = true, guiName = "#CAE_PAW_ConsumptionPermanent",
+            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
         string ECConsumptionStr = "";
 
 
@@ -80,23 +81,12 @@ namespace CommNetAntennasConsumptor
         {
             string text = "";
 
-            List<ModuleDeployableAntenna> MDAs = part.Modules.OfType<ModuleDeployableAntenna>().ToList();
-            ModuleDeployableAntenna moduleDeployable = null;
-            if (MDAs.Count == 1)
-                moduleDeployable = MDAs[0];
+            bool ContainsToggler = part.Modules.Contains("ModuleAntennaToggler");
 
-
-            bool ContainsDMSIGINT = part.Modules.Contains("DMSIGINT");
-            bool ContainsDMSoilMoisture = part.Modules.Contains("DMSoilMoisture");
-
-            //List<ModuleDataTransmitter> MDTs = part.Modules.OfType<ModuleDataTransmitter>().ToList();
-            //if (MDTs.Count == 1)
-            //    moduleDT = MDTs[0];
-
-            if (moduleDeployable == null && !ContainsDMSIGINT && !ContainsDMSoilMoisture)
-                text += Localizer.Format("#CAE_ConsumptionMessage");
+            if (!ContainsToggler)
+                text += Localizer.Format("#CAE_MessageWhenEnabled");
             else
-                text += Localizer.Format("#CAE_ConsumptionMessageExt");
+                text += Localizer.Format("#CAE_MessageWhenExtended");
 
 
             if (this.resHandler.inputResources.Count == 1
