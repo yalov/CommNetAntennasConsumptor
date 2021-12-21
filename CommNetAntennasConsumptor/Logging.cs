@@ -9,14 +9,29 @@ namespace CommNetAntennasConsumptor
         private const string PREFIX = "<color=green>[CNAConsumptor]</color> ";
         private const bool time = false;
 
-        public static void Log<T>(T msg, params object[] args)
+        [System.Diagnostics.Conditional("DEBUG")]
+        public static void LogDebug(params object[] args)
         {
-            if (msg == null) { Log("null " + args); return; }
+            Log(args);
+        }
 
-            Debug.Log(PREFIX +
-                (time ? DateTime.Now.ToString("HH:mm:ss.f ", CultureInfo.InvariantCulture) : "") +
-                String.Format(CultureInfo.InvariantCulture, msg.ToString(), args)
+        [System.Diagnostics.Conditional("DEBUG")]
+        public static void LogFormatDebug(string msg, params object[] args)
+        {
+            LogFormat(msg, args);
+        }
+
+        public static void Log(params object[] args)
+        {
+            Debug.Log(PREFIX + (time ? DateTime.Now.ToString("HH:mm:ss.f ") : "") +
+                String.Join(", ", args)
                 );
+        }
+
+        public static void LogFormat(string msg, params object[] args)
+        {
+            Debug.LogFormat(PREFIX + (time ? DateTime.Now.ToString("HH:mm:ss.f ") : "") +
+                msg, args);
         }
     }
 }

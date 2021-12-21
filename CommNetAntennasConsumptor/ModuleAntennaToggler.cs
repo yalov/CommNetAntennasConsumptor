@@ -11,7 +11,7 @@ namespace CommNetAntennasConsumptor
         public bool AntennaEnabled = true;
 
         [KSPField(guiName = "#autoLOC_6001352" /*Status*/, guiActive = true, guiActiveEditor = true,
-            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
+            groupName = "CommNetA", groupDisplayName = "#CAE_PAW_Group_Name", groupStartCollapsed = true)]
         public string statusText = Localizer.Format("#autoLOC_6001072"); //"Enabled";
 
         private float scalar;
@@ -22,7 +22,7 @@ namespace CommNetAntennasConsumptor
         }
 
         [KSPEvent(guiName = "#CAE_PAW_DisableAntenna", guiActive = true, guiActiveEditor = true, active = true,
-            groupName = "CommNetA", groupDisplayName = "#CommNetA_Name", groupStartCollapsed = true)]
+            groupName = "CommNetA", groupDisplayName = "#CAE_PAW_Group_Name", groupStartCollapsed = true)]
         public void ToggleAntenna()
         {
             AntennaEnabled = !AntennaEnabled;
