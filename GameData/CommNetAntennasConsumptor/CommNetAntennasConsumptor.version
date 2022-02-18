@@ -1,6 +1,7 @@
 {
   "NAME": "CommNetAntennasConsumptor",
   "URL": "https://raw.githubusercontent.com/yalov/CommNetAntennasConsumptor/master/CommNetAntennasConsumptor.version",
+  "CHANGE_LOG_URL": "https://raw.githubusercontent.com/yalov/CommNetAntennasConsumptor/master/ChangeLog.md",
   "DOWNLOAD": "https://github.com/yalov/CommNetAntennasConsumptor/releases",
   "GITHUB": {
     "USERNAME": "yalov",
@@ -9,7 +10,7 @@
   "VERSION": {
     "MAJOR": 3,
     "MINOR": 5,
-    "PATCH": 3,
+    "PATCH": 4,
     "BUILD": 0
   },
   "KSP_VERSION": {

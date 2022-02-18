@@ -1,5 +1,9 @@
 ﻿## ChangeLog:
 
+### Version 3.5.4
+ * fix info strings in the editor
+ * make ModuleAntennaToggler patch more flexible
+
 ### Version 3.5.3
  * update localization
 

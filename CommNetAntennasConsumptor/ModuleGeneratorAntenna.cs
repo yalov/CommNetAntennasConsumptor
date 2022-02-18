@@ -83,7 +83,7 @@ namespace CommNetAntennasConsumptor
 
             bool ContainsToggler = part.Modules.Contains("ModuleAntennaToggler");
 
-            if (!ContainsToggler)
+            if (ContainsToggler)
                 text += Localizer.Format("#CAE_MessageWhenEnabled");
             else
                 text += Localizer.Format("#CAE_MessageWhenExtended");
