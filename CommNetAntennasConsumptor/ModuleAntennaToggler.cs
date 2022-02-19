@@ -26,8 +26,8 @@ namespace CommNetAntennasConsumptor
         {
             BasePAWGroup CommunicationGroup = new BasePAWGroup("CF_Comms", "#CAE_PAW_Group_Name", true);
 
-            foreach (var field in Fields) field.group = CommunicationGroup;
-            foreach (var ev in Events)    ev.group = CommunicationGroup;
+            Fields[nameof(statusText)].group = CommunicationGroup;
+            Events[nameof(ToggleAntenna)].group = CommunicationGroup;
 
             SetScalar(AntennaEnabled ? 1f : 0f);
         }

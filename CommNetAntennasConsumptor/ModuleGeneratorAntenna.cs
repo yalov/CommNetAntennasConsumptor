@@ -44,8 +44,7 @@ namespace CommNetAntennasConsumptor
             //Log("ModuleGeneratorAntenna Start");
             BasePAWGroup CommunicationGroup = new BasePAWGroup("CF_Comms", "#CAE_PAW_Group_Name", true);
 
-            foreach (var f in Fields)
-                f.group = CommunicationGroup;
+            Fields[nameof(ECConsumptionStr)].group = CommunicationGroup;
 
             List<ModuleDataTransmitter> MDTs = part.Modules.OfType<ModuleDataTransmitter>().ToList();
             if (MDTs.Count == 1)
