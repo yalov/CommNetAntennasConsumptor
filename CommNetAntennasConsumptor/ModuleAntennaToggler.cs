@@ -10,25 +10,27 @@ namespace CommNetAntennasConsumptor
         [KSPField(isPersistant = true)]
         public bool AntennaEnabled = true;
 
-        [KSPField(guiName = "#autoLOC_6001352" /*Status*/, guiActive = true, guiActiveEditor = true,
-            groupName = "CommNetA", groupDisplayName = "#CAE_PAW_Group_Name", groupStartCollapsed = true)]
+        [KSPField(guiName = "#autoLOC_6001352" /*Status*/, guiActive = true, guiActiveEditor = true)]
         public string statusText = Localizer.Format("#autoLOC_6001072"); //"Enabled";
 
-        private float scalar;
-
-        public override void OnStart(PartModule.StartState state)
-        {
-            SetScalar(AntennaEnabled ? 1f : 0f);
-        }
-
-        [KSPEvent(guiName = "#CAE_PAW_DisableAntenna", guiActive = true, guiActiveEditor = true, active = true,
-            groupName = "CommNetA", groupDisplayName = "#CAE_PAW_Group_Name", groupStartCollapsed = true)]
+        [KSPEvent(guiName = "#CAE_PAW_DisableAntenna", guiActive = true, guiActiveEditor = true, active = true)]
         public void ToggleAntenna()
         {
             AntennaEnabled = !AntennaEnabled;
             SetScalar(AntennaEnabled ? 1f : 0f);
         }
 
+        private float scalar;
+
+        public override void OnStart(PartModule.StartState state)
+        {
+            BasePAWGroup CommunicationGroup = new BasePAWGroup("CF_Comms", "#CAE_PAW_Group_Name", true);
+
+            foreach (var field in Fields) field.group = CommunicationGroup;
+            foreach (var ev in Events)    ev.group = CommunicationGroup;
+
+            SetScalar(AntennaEnabled ? 1f : 0f);
+        }
 
         private void updatePAWText()
         {

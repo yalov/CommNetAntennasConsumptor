@@ -1,5 +1,8 @@
 ﻿## ChangeLog:
 
+### Version 3.5.5
+ * fix KSPCommunityFixes incompatibility
+
 ### Version 3.5.4
  * fix info strings in the editor
  * make ModuleAntennaToggler patch more flexible

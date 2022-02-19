@@ -9,7 +9,7 @@ namespace CommNetAntennasConsumptor
     public class ModuleGeneratorAntenna : ModuleGenerator, IModuleInfo
     {
         [KSPField(guiActive = true, guiActiveEditor = true, guiName = "#CAE_PAW_ConsumptionPermanent",
-            groupName = "CommNetA", groupDisplayName = "#CAE_PAW_Group_Name", groupStartCollapsed = true)]
+            groupStartCollapsed = true)]
         string ECConsumptionStr = "";
 
 
@@ -42,6 +42,10 @@ namespace CommNetAntennasConsumptor
         public void Start()
         {
             //Log("ModuleGeneratorAntenna Start");
+            BasePAWGroup CommunicationGroup = new BasePAWGroup("CF_Comms", "#CAE_PAW_Group_Name", true);
+
+            foreach (var f in Fields)
+                f.group = CommunicationGroup;
 
             List<ModuleDataTransmitter> MDTs = part.Modules.OfType<ModuleDataTransmitter>().ToList();
             if (MDTs.Count == 1)
