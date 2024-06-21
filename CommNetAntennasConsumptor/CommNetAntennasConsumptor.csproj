@@ -33,6 +33,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CNACIconManager.cs" />
     <Compile Include="ModuleAntennaToggler.cs" />
     <Compile Include="ModuleGeneratorAntenna.cs" />
     <Compile Include="Formatter.cs" />
@@ -57,11 +58,12 @@
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
-set textTemplatingPath="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\TextTransform.exe"
+set textTemplatingPath="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\TextTransform.exe"
 
 %25textTemplatingPath%25 -out "$(ProjectDir)Properties\AssemblyVersion.cs" "$(ProjectDir)Properties\AssemblyVersion.tt"</PreBuildEvent>
   </PropertyGroup>

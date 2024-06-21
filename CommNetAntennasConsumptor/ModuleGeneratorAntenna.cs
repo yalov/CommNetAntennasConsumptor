@@ -78,7 +78,7 @@ namespace CommNetAntennasConsumptor
 
         public override string GetModuleDisplayName()
         {
-            return Localizer.Format("#CAE_ModuleGeneratorAntennaDisplayName");
+            return Localizer.Format("#CAE_ModuleGeneratorAntennaTitle");
         }
         public override string GetInfo()
         {
@@ -116,7 +116,7 @@ namespace CommNetAntennasConsumptor
         /// Return a string title for your module.
         /// </summary>
         /// <returns></returns>
-        public string GetModuleTitle() => Localizer.Format("#CAE_ModuleGeneratorAntennaDisplayName");
+        public string GetModuleTitle() => Localizer.Format("#CAE_ModuleGeneratorAntennaTitle");
 
         /// <summary>
         /// Return a string to be displayed in the main 

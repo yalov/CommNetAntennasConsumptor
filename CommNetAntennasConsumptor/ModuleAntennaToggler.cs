@@ -65,7 +65,7 @@ namespace CommNetAntennasConsumptor
 
         //---------IModuleInfo-------------------
 
-        public string GetModuleTitle() => Localizer.Format("#CAE_ModuleAntennaTogglerInfoTitle");
+        public string GetModuleTitle() => Localizer.Format("#CAE_ModuleAntennaTogglerTitle");
 
         public override string GetInfo() => Localizer.Format("#CAE_ModuleAntennaTogglerInfo");
 
