@@ -6,7 +6,7 @@ rem v2
 rem instruction in the BUILDRELEASE.BAT
 
 rem Set variables here
-set GAMEPATH=c:\Users\User\Games\Kerbal Space Program 1.12.3
+set GAMEPATH=C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program
 set MODNAME=CommNetAntennasConsumptor
 
 REM copying dll and .version to Repository/GameData
