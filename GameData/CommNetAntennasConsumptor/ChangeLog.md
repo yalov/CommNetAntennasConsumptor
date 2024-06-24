@@ -1,5 +1,8 @@
 ﻿## ChangeLog:
 
+### Version 3.5.7
+ * simplify loading icons
+
 ### Version 3.5.6
  * icons in the "Filter by Module" in the Editor
 
