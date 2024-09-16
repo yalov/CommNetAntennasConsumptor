@@ -1,5 +1,8 @@
 ﻿## ChangeLog:
 
+### Version 3.5.8
+* Adds Chinese localization (thanks to zhangyuesai)
+
 ### Version 3.5.7
  * simplify loading icons
 
