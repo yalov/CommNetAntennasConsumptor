@@ -19,7 +19,8 @@
         { "name": "ModuleManager" }
     ],
     "conflicts": [
-        { "name": "RemoteTech" }
+        { "name": "RemoteTech" },
+        { "name": "AntennaSleep" }
     ],
     "recommends": [
         { "name": "CommNetAntennasExtension" },
